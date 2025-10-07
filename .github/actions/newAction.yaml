@@ -1,0 +1,16 @@
+name: 'exercise9'
+description: 'New action - Teams Notify'
+inputs: 
+  webhook-url: 
+    description: 'Teams webhook url'
+    required: true
+  title:
+    description: 'Message title'
+    required: false
+    default: 'GitHub Actions notification'
+  message:
+    description: 'Message content'
+    required: true
+runs:
+  using: 'node20'
+  main: newAction.js
