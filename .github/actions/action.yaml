@@ -1,7 +1,7 @@
 name: 'exercise9'
 description: 'New action - Teams Notify'
 inputs: 
-  webhook-url: 
+  webhook_url: 
     description: 'Teams webhook url'
     required: true
   title:
