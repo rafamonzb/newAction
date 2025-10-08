@@ -51,6 +51,9 @@ function postJson(webhookUrl, payload) {
       "text": message
     }
 
+    console.log("payload:", JSON.stringify(payload))
+    console.log("hasURL:", !!webhookUrl)
+
     const result = await postJson(webhookUrl, payload)
     console.log(`Sent to Teams: ${result}`)
   } catch(err) {
