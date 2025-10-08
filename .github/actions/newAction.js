@@ -47,6 +47,7 @@ function postJson(webhookUrl, payload) {
       "@type": "MessageCard",
       "@context": "http://schema.org/extensions",
       "summary": title,
+      "themeColor": "0078D4",
       "title": title,
       "text": message
     }
