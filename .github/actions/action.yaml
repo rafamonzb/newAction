@@ -4,10 +4,10 @@ inputs:
   webhook_url: 
     description: 'Teams webhook url'
     required: true
-  title:
-    description: 'Message title'
-    required: false
-    default: 'GitHub Actions notification'
+  # title:
+  #   description: 'Message title'
+  #   required: false
+  #   default: 'GitHub Actions notification'
   message:
     description: 'Message content'
     required: true

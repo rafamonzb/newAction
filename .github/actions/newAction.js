@@ -37,19 +37,28 @@ function postJson(webhookUrl, payload) {
 (async () => {
   try {
     const webhookUrl = process.env.INPUT_WEBHOOK_URL
-    const title = process.env.INPUT_TITLE
+    // const title = process.env.INPUT_TITLE
     const message = process.env.INPUT_MESSAGE
 
     if(!webhookUrl) throw new Error("Missing input: webhook_url")
     if(!message) throw new Error("Missing input: message")
 
     const payload = {
-      "@type": "MessageCard",
-      "@context": "http://schema.org/extensions",
-      "summary": title,
-      "themeColor": "0078D4",
-      "title": title,
-      "text": message
+      "type": "message",
+      "attachments": [{
+        "contentType": "application/vmd.microsoft.card.adaptative",
+        "content": {
+          "$schema": "http://adaptativecards.io/schemas/adaptative-card.json",
+          "type": "AdaptativeCard", 
+          "version": "1.4",
+          "body": [{
+            "type": "TextBlock",
+            "size": "Large",
+            "weight": "Bolder",
+            "text": message,
+          }]
+        }
+      }]
     }
 
     console.log("payload:", JSON.stringify(payload))
