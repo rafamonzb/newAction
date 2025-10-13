@@ -46,10 +46,11 @@ function postJson(webhookUrl, payload) {
     const payload = {
       "type": "message",
       "attachments": [{
-        "contentType": "application/vmd.microsoft.card.adaptative",
+        "contentType": "application/vmd.microsoft.card.adaptive",
+        "contentUrl": null,
         "content": {
-          "$schema": "http://adaptativecards.io/schemas/adaptative-card.json",
-          "type": "AdaptativeCard", 
+          "$schema": "http://adaptivecards.io/schemas/adaptative-card.json",
+          "type": "AdaptiveCard", 
           "version": "1.4",
           "body": [{
             "type": "TextBlock",
